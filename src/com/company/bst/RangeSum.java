@@ -32,16 +32,13 @@ public class RangeSum {
         if(root==null){
             return 0;
         }
-        if(root.left!=null&&root.key>low){
-            sum+=rangeSumBst(root.left,low,high);
+        if(root.key<low){
+            return rangeSumBst(root.right,low,high);
         }
-        if(root.right!=null&&root.key<high){
-            sum+=rangeSumBst(root.right,low,high);
+        if(root.key>high){
+            return rangeSumBst(root.left,low,high);
         }
-        if(root.key>=low&&root.key<=high){
-            sum+=root.key;
-        }
-        return sum;
+        return root.key+rangeSumBst(root.right,low,high)+rangeSumBst(root.left,low,high);
     }
     public void findRangeSum() {
         Scanner sc = new Scanner(System.in);
