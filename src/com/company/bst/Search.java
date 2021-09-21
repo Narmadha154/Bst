@@ -35,7 +35,15 @@ public class Search {
         else if(key<root.key){
             return search(root.left,key);
         }
-            return search(root.right, key);
+        return search(root.right, key);
+    }
+    public void preOrder(Node node){
+        if(node==null){
+            return;
+        }
+        System.out.print(node.key+" ");
+        preOrder(node.left);
+        preOrder(node.right);
     }
     public void doSearch(){
         Scanner sc = new Scanner(System.in);
@@ -49,7 +57,8 @@ public class Search {
         }
         System.out.println("Enter the key to be checked");
         int keyVal = sc.nextInt();
-        Node val=search(root,keyVal);
-        System.out.println(val.key);
+        root=search(root,keyVal);
+        preOrder(root);
+
     }
 }
