@@ -36,6 +36,26 @@ public class Runner{
                     LevelOrderTraversal level = new LevelOrderTraversal();
                     level.levelOrder();
                     break;
+                case 8:
+                    KthSmallest small = new KthSmallest();
+                    small.findCount();
+                    break;
+                case 9:
+                    Search searchKey = new Search();
+                    searchKey.doSearch();
+                    break;
+                case 10:
+                    MinDistance dist = new MinDistance();
+                    dist.findMinDis();
+                    break;
+                case 11:
+                    MinAbsoluteDiff diff = new MinAbsoluteDiff();
+                    diff.findMinDiff();
+                    break;
+                case 12:
+                    RangeSum sum = new RangeSum();
+                    sum.findRangeSum();
+                    break;
                 default:
                     System.out.println("no program");
             }
