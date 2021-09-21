@@ -56,6 +56,18 @@ public class Runner{
                     RangeSum sum = new RangeSum();
                     sum.findRangeSum();
                     break;
+                case 13:
+                    SumOfLeafNode leaf = new SumOfLeafNode();
+                    leaf.findLeafSum();
+                    break;
+                case 14:
+                    TrimBst trim = new TrimBst();
+                    trim.doTrim();
+                    break;
+                case 15:
+                    Mode mod = new Mode();
+                    mod.findModeOfBst();
+                    break;
                 default:
                     System.out.println("no program");
             }
